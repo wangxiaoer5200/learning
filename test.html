@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>学习布局</title>
+	</head>
+	<style type="text/css">
+		html,body{margin: 0;height: 100%;width: 100%;}
+		.comWidth{width: 960px;margin-left: auto;margin-right: auto;}
+        .left{float: left;}
+        .right{float: right;}
+        .clearfloat:after{content: ""; display: block; clear: both;}
+        .clearfloat{zoom: 1;}
+		.header{height: 60px;background:#000000;color: #ffffff;}
+		.banner{height: 250px;background: green;position: relative;}
+		.content{}
+		.content>div{margin-bottom: 10px;margin-bottom: 10px;}
+		.footer{background: #A1A1A1;height: 100px;}
+		.header .left{padding-left: 150px;}
+		.header .left span{display: inline-block;line-height: 60px;font-weight: bold;font-size: 26px;}
+		.web-nav{margin-right: 100px;}
+		.web-nav span{line-height: 30px;text-decoration: underline;margin: 0 10px;}
+		.web-nav span a{color: #FFFFFF;}
+		.web-nav span a:hover{cursor: pointer;color:#ff7700;}
+		.number{position: absolute;bottom: 20px;right: 150px;}
+		.number ul{display: flex;align-items: flex-end;flex-direction: row;}
+		.number ul li{margin-right:5px;display: inline-block;height: 30px;width: 30px;background: greenyellow;text-align: center;line-height: 30px;}
+		.banner .current{height: 60px;border-right: 2px solid #000000;background: #e5e5e5;display: flex;justify-content: center;align-items: flex-end;}
+		.footer label{line-height: 50px;color: #FFFFFF;display: block;text-align: center;}
+		.content .title{height: 60px;border-bottom: 2px solid #E5E5E5;display: flex;align-items: flex-end;}
+		.content .title ul{padding-left:0;display: flex;align-items: flex-end;flex-direction: row;margin-bottom: 0;margin-top: 0;}
+		.content .title ul li{border:1px solid #A1A1A1;border-bottom: none;display: inline-block;height: 40px;background:#E5E5E5;text-align: center;line-height: 40px;padding: 0 20px;border-radius:10px 10px 0 0;}
+		.content .title .on{background: #FFFFFF;}
+		.comWidth>div{margin: 10px 0;}
+		.content1 .left{width: 340px;margin-right: 10px;height: 200px;border: 1px solid #E5E5E5;}
+		.content1 .right{width:254px;height: 200px;border: 1px solid #E5E5E5;}
+		.content2{display: flex;flex-direction: row;justify-content: space-between;width: 100%;}
+		.content2>div{height: 200px;width: 230px;border:1px solid #e5e5e5;}
+		.content3{display: flex;flex-direction: row;justify-content: space-between;width: 100%;}
+		.content3>div{height: 200px;width: 310px;border:1px solid #e5e5e5;}
+		.context{display: flex;justify-content: center;align-items: center;font-size: 18px;}	
+	</style>
+	<body>
+		<div class="header clearfloat">
+			<div class="left"><span>Logo</span></div>
+			<div class="web-nav right"><span><a href="#">GitHub</a></span>
+				 <span><a href="#">登录</a></span>
+				 <span><a href="#">注册</a></span>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="number">
+				<ul>
+					<li>1</li>
+					<li class="current">2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="title">
+				<ul class="comWidth">
+					<li class="on">主页</li>
+					<li>侧页</li>
+					<li>关于</li>
+				</ul>
+			</div>
+			<div class="comWidth">
+				<div class="content1 clearfloat">
+					<div class="left context">content1</div>
+					<div class="left context">content2</div>
+					<div class="right context">content3</div>
+				</div>
+				<div class="content2">
+					<div class="context">content4</div>
+					<div class="context">content5</div>
+					<div class="context">content6</div>
+					<div class="context">content7</div>
+				</div>
+				<div class="content3">
+					<div class="context">content8</div>
+					<div class="context">content9</div>
+					<div class="context">content10</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="footer"><label>©2018&nbsp;&nbsp;ife.baidu.com </label></div>
+	</body>
+</html>
